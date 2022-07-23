@@ -1,0 +1,98 @@
+<!Doctype html>
+<html>
+<head>
+	<title>even and odd Method</title>
+	<style type="text/css">
+		body{
+			height: 100vh;
+
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			flex-direction: column;
+		}
+		.container{
+			width: 1000px;
+			background-color: #f4f4f4;
+			padding: 20px;
+
+			display: flex;
+		}
+		.box{
+			width: 100px;
+			height: 300px;
+			margin: 0 20px;
+		}
+		.square1{
+			background-color: green;
+		}
+		.square2{
+			background-color: orange;
+		}
+		.square3{
+			background-color: blue;
+		}
+		.square4{
+			background-color: violet;
+		}
+		.square5{
+			background-color: brown;
+		}								
+	</style>
+</head>
+<body>
+	
+	<div class="container">
+		<div class="box square1">DIV 1 Index 0 Div 5 Index -5</div>
+		<hr/>
+		<div class="box square2">DIV 2 Index 1 Div 4 Index -4</div>
+		<hr/>
+		<div class="box square3">DIV 3 Index 2 Div 3 Index -3</div>
+		<hr/>
+		<div class="box square4">DIV 4 Index 3 Div 2 Index -2</div>
+		<hr/>
+		<div class="box square5">DIV 5 Index 4 Div 1 Index -1</div>
+	</div>
+	<button type="button" id="evenbtn">Even Button</button>
+	<button type="button" id="oddbtn">Odd Button</button>
+	<button type="button" id="slcbtn">Slice Button</button>
+
+	<script type="text/javascript" src="./libs/jquery-3.6.0.min.js"></script>
+	<script type="text/javascript">
+		$(document).ready(function(){
+
+			// console.log('hi');
+			//evenbtn
+			$('#evenbtn').click(function(){
+				$('.box').even().css('background-color','red');
+			});
+
+			// oddbtn
+			$('#oddbtn').click(function(){
+				$('.box').odd().css('background-color','grey');
+			});
+
+
+			// slice (start,stop)
+			$('#slcbtn').click(function(){
+				// $('.box').slice(1,4).css({
+				// 	'background-color':'steelblue',
+				// 	'color':'#fff'
+				// });
+
+				// $('.box').slice(0,3).css({
+				// 	'background-color':'steelblue',
+				// 	'color':'#fff'
+				// });
+
+				// $('.box').slice(-4,-1).css({
+				// 	'background-color':'steelblue',
+				// 	'color':'#fff'
+				// });				
+
+			})
+
+		});
+	</script>
+</body>
+</html>

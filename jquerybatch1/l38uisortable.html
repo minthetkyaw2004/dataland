@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>ui sortable Method</title>
+	<link rel="stylesheet" href="./libs/jquery-ui-1.13.1/jquery-ui.min.css" type="text/css" />
+	<style type="text/css">
+		body{
+			height: 100vh;
+
+			display: flex;
+			justify-content: center;
+			align-items: center;
+		}
+		.container,.containertwo{
+			width: 600px;
+			background-color: #f4f4f4;
+			padding: 20px;
+			margin: 0 10px;
+			box-shadow: 5px 0 10px #888;
+		}
+		td,tr{
+			border: 1px solid black;
+			padding: 5px;
+		}
+
+		.spacing{
+			background-color: skyblue;
+		}
+	</style>
+</head>
+<body>
+	
+
+	<div class="container">
+		<h1>Closing Inventory</h1>
+		<table id="mydata">
+			<thead>
+				<th>ID</th>
+				<th>Product Name</th>
+				<th>Unit Price</th>
+				<th>Qty</th>
+				<th>Category</th>
+			</thead>
+			<tbody>
+				<tr class="mov">
+					<td>1001</td>
+					<td>Redbull</td>
+					<td>700</td>
+					<td>10</td>
+					<td>Food</td>
+				</tr>
+				<tr class="mov">
+					<td>1002</td>
+					<td>Sponsor</td>
+					<td>500</td>
+					<td>30</td>
+					<td>Food</td>
+				</tr>
+				<tr class="stop">
+					<td>1003</td>
+					<td>face masks</td>
+					<td>50</td>
+					<td>20</td>
+					<td>Non Food</td>
+				</tr>
+				<tr>
+					<td>1004</td>
+					<td>Sanitiser</td>
+					<td>200</td>
+					<td>50</td>
+					<td>Non Food</td>
+				</tr>
+				<tr class="stop">
+					<td>1005</td>
+					<td>Shower Gel</td>
+					<td>200</td>
+					<td>50</td>
+					<td>Non Food</td>
+				</tr>
+				<tr class="stop">
+					<td>1006</td>
+					<td>Shampoo</td>
+					<td>100</td>
+					<td>300</td>
+					<td>Non Food</td>
+				</tr>
+				<tr class="mov">
+					<td>1007</td>
+					<td>Drinking Water</td>
+					<td>300</td>
+					<td>70</td>
+					<td>Food</td>
+				</tr>
+				<tr class="mov">
+					<td>1008</td>
+					<td>Cheese</td>
+					<td>120</td>
+					<td>500</td>
+					<td>Food</td>
+				</tr>
+			</tbody>
+		</table>
+	</div>
+	<div class="containertwo">
+		<h1>Food Products Inventory</h1>
+		<table id="mydatatwo">
+
+			<thead>
+				<th>ID</th>
+				<th>Product Name</th>
+				<th>Unit Price</th>
+				<th>Qty</th>
+				<th>Category</th>
+			</thead>
+			<tbody>
+				<tr class="mov">
+					<td>1009</td>
+					<td>Jelly</td>
+					<td>100</td>
+					<td>300</td>
+					<td>Food</td>
+				</tr>
+				<tr class="mov">
+					<td>1010</td>
+					<td>Cake</td>
+					<td>300</td>
+					<td>100</td>
+					<td>Food</td>
+				</tr>				
+			</tbody>
+		</table>
+	</div>
+
+
+
+	<script type="text/javascript" src="./libs/jquery-3.6.0.min.js"></script>
+	<script type="text/javascript" src="./libs/jquery-ui-1.13.1/jquery-ui.min.js"></script>
+	<script type="text/javascript">
+		
+		$(document).ready(function(){
+
+			// console.log('hi');
+
+			// $('#mydata tbody').sortable();
+
+			$('#mydata tbody').sortable({
+				// axis:"y",
+				// axis:"x"
+
+				containment:'.container',
+				// we can call class without .
+				placeholder:"spacing",
+				connectWith: "#mydatatwo tbody",
+				cancel:".stop",
+				// we can move but can't put among cancel items
+				items:".mov",
+
+				// cursor:"grab"
+				// cursor:"move"
+				cursor:"crosshair"
+			});
+
+			$('#mydatatwo tbody').sortable({
+				placeholder:"spacing",
+				connectWith:"#mydata tbody",
+				cancel:'.mov'
+			});
+
+		});
+
+	</script>
+</body>
+</html>
+
+<!-- 28ST -->

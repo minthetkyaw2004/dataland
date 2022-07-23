@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>prepend and append Method</title>
+</head>
+<body>
+
+	<h1>Hello Myanmar</h1>
+	<button type="button" id="prependbtn">Prepend Text</button>
+	<button type="button" id="appendbtn">Append Text</button>
+	<button type="button" id="appendtobtn">Append To Text</button>	
+
+	<script type="text/javascript" src="./libs/jquery-3.6.0.min.js"></script>
+	<script type="text/javascript">
+
+		$(document).ready(function(){
+			// console.log("hey");
+
+			// prepend()
+			$('#prependbtn').click(function(){
+				//$("h1").prepend('greeting message = ');
+				$("h1").prepend("Greeting Message = <br/>");
+			});
+
+			// append()
+			$('#appendbtn').click(function(){
+				//$("h1").append('greeting message = ');
+				$("h1").append("Greeting Message = <br/>");
+			});
+
+			// appendto
+			$('#appendtobtn').click(function(){
+				// result = not working ( cuz must be inc html tags )
+				// $('hello world').appendTo('h1');
+
+				$('<i>Greeting message = </i>').appendTo('h1');
+			});
+		});
+
+	</script>
+</body>
+</html>

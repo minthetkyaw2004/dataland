@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>before & after Method</title>
+</head>
+<body>
+
+
+	<h1>Hello Myanmar</h1>
+	<button type="button" id="before">Before Insert</button>
+	<button type="button" id="after">After Insert</button>
+
+	<script type="text/javascript" src="./libs/jquery-3.6.0.min.js"></script>
+	<script type="text/javascript">
+		
+		$(document).ready(function(){
+
+			// console.log('hi');
+
+
+			$('#before').click(function(){
+				//console.log('i am before');
+
+				$('h1, h2').before('save myanmar');
+			});
+			$(#after).click(function()){
+				// console.log(' i am after');
+				$('h1').after('<p><b>Pray Myanmar</b></p>')
+			}
+
+		});
+
+	</script>
+</body>
+</html>
+24BA

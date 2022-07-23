@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Local Storage</title>
+</head>
+<body>
+
+	<!-- Local Storage -->
+
+	<!-- Store -->
+
+	<!-- local Storage.setItem('name','aung aung'); -->
+
+</body>
+<script type="text/javascript">
+	console.log("hey");
+
+	// local storage
+
+
+
+	// store
+	localStorage.setItem('name','aung aung');
+	localStorage.setItem('age',27);
+	localStorage.setItem('city','Yangon');
+
+
+
+	// update
+		// method 1
+		localStorage.setItem('name',"kyaw kyaw");
+
+		// method 2
+		localStorage.age = 30;
+
+
+
+	// get
+
+	let getname1 = localStorage.getItem("name");
+	console.log(getname1);
+	console.log(typeof getname1);
+
+	let getage1 = localStorage.getItem("age");
+	console.log(getage1);
+	console.log(typeof getage1);
+
+	let getcity1 = localStorage.getItem("city");
+	console.log(getcity1);
+	console.log(typeof getcity1);
+
+	// delete/ destroy
+
+	// method 1 ( destroy single )
+	// localStorage.removeItem("name");
+	// localStorage.removeItem("age");
+	// localStorage.removeItem("city");
+
+	// method 2 ( destroy all )
+	// localStorage.clear()
+
+	// -----------------------------------------------
+
+	// Session storage
+
+	// store
+	sessionStorage.setItem("name","su su");
+	sessionStorage.setItem("age",30);
+	sessionStorage.setItem("city","Mandalay");
+
+	// update
+	// method 1
+	sessionStorage.setItem("name","Yu Yu");
+	//method 2
+	sessionStorage.age = 40;
+
+	// get
+	let getname2 = sessionStorage.getItem("name");
+	console.log(getname2);
+	console.log(typeof getname2)
+
+	let getage2 = sessionStorage.getItem("age");
+	console.log(getage2);
+	console.log(typeof getage2);
+
+	let getcity2 = sessionStorage.getItem("city");
+	console.log(getcity2);
+	console.log(typeof getcity2);
+
+	// delete
+
+	// method 1
+	sessionStorage.removeItem("name");
+	sessionStorage.removeItem("age");
+	sessionStorage.removeItem("city");
+
+	// method 2
+	sessionStorage.clear();
+
+
+</script>
+</html>
+

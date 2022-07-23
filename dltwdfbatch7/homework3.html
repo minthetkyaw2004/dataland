@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home Work 3</title>
+    <style>
+        .cent{
+            text-align: center;
+        }
+        .blk{
+            display: inline-block;
+        }
+        .mid{
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        .bold{
+            font-weight: bold;
+        }
+        .yellow{
+            background: yellow;
+        }
+        .under{
+            text-decoration: underline;
+        }
+        .right{
+            float: right;
+        }
+    </style>
+</head>
+<body>
+    <img src="./img/union-election-1.jpg" height="200px" alt="2020 election photo" class="mid"/>
+    <h3 class="under bold cent">Welcome To 2020 Election</h3>
+    <p class="cent">Citizen ID: WDF7693</p>
+    <hr/>
+    <form action="">
+        <table border="1" class="mid" style="width: fit-content;">
+            <tr>
+                <td colspan="2" class="cent yellow bold">Election Form</td>
+            </tr>
+            <tr>
+                <td>Leader Name: </td>
+                <td><input type="text" name="leader" placeholder="Enter Leader Name"/></td>
+            </tr>
+            <tr>
+                <td>Your Name:</td>
+                <td><input type="text" name="name" placeholder="Enter Your Name"/></td>
+            </tr>
+            <tr>
+                <td>Email:</td>
+                <td><input type="email" name="email" placeholder="Enter Your Email"/></td>
+            </tr>
+            <tr>
+                <td>Passcode:</td>
+                <td><input type="password" name="password" placeholder="Enter Your Passcode"/></td>
+            </tr>
+            <tr>
+                <td>Parties:</td>
+                <td>
+                    <input type="radio" name="nld" id="nld"/>
+                    <label for="nld">NLD</label>
+                    <input type="radio" name="usdp" id="usdp"/>
+                    <label for="usdp">USDP</label>
+                    <input type="radio" name="ppp" id="ppp"/>
+                    <label for="ppp">PPP</label>
+                </td>
+            </tr>
+            <tr>
+                <td>Location: </td>
+                <td>
+                    <select name="location" id="city">
+                        <option value="">Choose City</option>
+                        <option name="location" value="ygn">Yangon</option>
+                        <option name="location" value="mdy">Mandalay</option>
+                        <option name="location" value="npt">Nay Pyi Taw</option>
+                    </select>
+                </td>
+            </tr>
+            <tr>
+                <td colspan="2">
+                    <input type="checkbox" name="need" id="ok">I accept  all the regulation of election community.
+                </td>
+            </tr>
+            <tr>
+                <td colspan="2">
+                    <input type="submit" value="Submit" class="right blk">
+                    <input type="reset" value="Cancel" class="right blk">
+                </td>
+            </tr>
+        </table>
+    </form>
+    <hr/>
+    <small class="cent" style="display:block;">Already register! <a href="https://www.google.com">Click Here to Login</a></small>
+</body>
+</html>

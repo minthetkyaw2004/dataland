@@ -1,0 +1,15 @@
+/*.paragraph::first-line{
+	color: red;
+}*/
+
+/*pseudo element ကို colon 2 ခုမလုပ်ပဲ 1 ခုပဲရေးလည်းရ*/
+
+/*.paragraph::first-letter{
+	color: red;
+	font-size: 30px;
+}*/
+
+.paragraph::selection{
+	background-color: orange;
+	color: white;
+}

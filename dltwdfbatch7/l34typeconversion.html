@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Type Conversion</title>
+</head>
+<body>
+
+
+
+</body>
+<script type="text/javascript">
+	
+
+	// val = Number(prompt("Enter Number"));
+	//  val = +prompt("Enter Number");
+
+	val = +"aung aung"; // NaN = Not a number
+	val = Number("aung aung"); // NaN = Not a number
+	val = Number([1,2,3,4,5]); // NaN = Not a number
+	console.log(val);
+	console.log(typeof val);
+	console.log(val.length);
+
+	val = 123.456789;
+	console.log(val);
+	console.log(val.toFixed(2)); // to number of decimal nearest value
+
+	val = +"50.897";
+	val = Number(val);
+	val = parseInt(val); // 50 == floor
+	console.log(val);
+	console.log(typeof val);
+	console.log(val.toFixed(2)); // 50.00
+
+	val = "50.897";
+	val = parseFloat(val);
+	console.log(val);
+	console.log(typeof val);
+
+	// Boolean to Number
+	val = Number(false);
+	val = Number(true);
+	console.log(val);
+	console.log(typeof val);
+
+	//..................................
+
+	// String to array
+
+	val = "aung tun tun";
+	// val = Array.function();
+	console.log(val);
+	console.log(typeof val);
+	console.log(val.length);
+	console.log(Array.isArray(val));
+
+	// can't convert to array
+	val = 2;
+	val = Array.from(val);
+
+	val = true;
+	val = Array.from(val);
+
+	val = {
+		music : "rock",
+		sport : "basketball"
+	};
+	val = Array.from(val);
+	console.log(val);
+	console.log(typeof val);
+
+</script>
+</html>

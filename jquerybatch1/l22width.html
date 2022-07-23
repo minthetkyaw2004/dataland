@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>width Method</title>
+	<style type="text/css">
+
+		body{
+			padding: 0;
+			margin: 0;
+		}
+
+		.box1{
+			width: 100px;
+			height: 80px;
+
+			margin: 5px; /*no action*/
+			padding: 10px; /* action on innerWidth and outerWidth*/
+
+			border: 5px solid #000; /* action on outerWidth*/
+		}
+
+		.box2{
+			width: 200px;
+			height: 80px;
+		}
+
+		.box3{
+			width: 300px;
+			height: 80px;
+		}
+
+		.box4{
+			width: 400px;
+			height: 80px;
+		}
+
+		.box5{
+			width: 500px;
+			height: 80px;
+		}	
+
+		.text-center{
+			text-align: center;
+		}
+	</style>
+</head>
+<body>
+
+	<div class="container">
+
+		<div class="box1" style="background-color: red;">Box 1</div>
+		<div class="box2" style="background-color: green;">Box 2</div>
+		<div class="box3" style="background-color: orange;">Box 3</div>
+		<div class="box4" style="background-color: blue;">Box 4</div>
+		<div class="box5" style="background-color: violet;">Box 5</div>
+
+	</div>
+
+
+	<script type="text/javascript" src="./libs/jquery-3.6.0.min.js"></script>
+	<script type="text/javascript">
+		
+		$(document).ready(function(){
+
+			// console.log('hi');
+
+			$('.box1').click(function(){
+
+				console.log('box 1 width : '+ $(this).width());
+				console.log('box 1 innerWidth : '+ $(this).innerWidth());
+				console.log('box 1 outerWidth : '+ $(this).outerWidth());
+
+
+			});
+
+			$('.box2').click(function(){
+
+				console.log('box 2 width : '+ $(this).width());
+
+			});
+
+			$('.box3').click(function(){
+
+				console.log('box 3 width : '+ $(this).width());
+
+			});
+
+			$('.box4').click(function(){
+
+				console.log('box 4 width : '+ $(this).width());
+
+			});
+
+			$('.box5').click(function(){
+
+				console.log('box 5 width : '+ $(this).width());
+
+				// $(this).width(cuswidth);
+
+				$(this).width(cuswidth).addClass('text-center');
+
+				console.log('Box 5 width : '+ $(this).width());
+			});						
+		});
+
+	</script>
+</body>
+</html>

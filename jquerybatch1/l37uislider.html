@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>ui slider Method</title>
+	<link rel="stylesheet" href="./libs/jquery-ui-1.13.1/jquery-ui.min.css" />
+	<style type="text/css">
+
+		*{
+			box-sizing: border-box;
+		}
+
+		body{
+			height: 100vh;
+
+			display: flex;
+			justify-content: center;
+			align-items: center;
+		}
+		.container{
+			width: 900px;
+			background-color: #f4f4f4;
+			padding: 20px;
+		}
+		.form-group{
+			margin: 10px 0;
+		}
+
+		.form-group label{
+			display: block;
+			font-size: 20px;
+			margin-bottom: 20px;
+		}
+
+		.form-control{
+			width: 100%;
+			font-size: 20px;
+			padding: 5px;
+		}
+	</style>
+</head>
+<body>
+
+	<div class="container">
+
+		<form action="" method="">
+		
+			<div class="form-group">
+				
+				<label for="loan">Loan $ :</label>
+				<input type="text" name="loan" id="loan" class="form-control" />
+
+			</div>
+
+			<div class="form-group">
+
+				<label for="myslider">Amount</label>		
+				<div id="myslider"></div>		
+
+			</div>
+
+			<div class="form-group">
+				
+				<label for="days">Days :</label>
+				<input type="text" name="days" id="days" class="form-control" />
+
+			</div>
+
+			<div class="form-group">
+
+				<label for="term">Term</label>		
+				<div id="term"></div>		
+
+			</div>
+
+
+		</form>
+
+	</div>
+	
+
+	<script type="text/javascript" src="./libs/jquery-3.6.0.min.js"></script>
+	<script type="text/javascript" src="./libs/jquery-ui-1.13.1/jquery-ui.min.js"></script>
+
+	<script type="text/javascript">
+		
+		$(document).ready(function(){
+			// console.log('hi');
+
+			$('#myslider').slider({
+				slide:function(e,ui){
+					// console.log(e.target);
+					// console.log(ui);
+					// console.log(ui.value);
+					$('#loan').val(ui.value);
+				},
+				min:10,
+				max:200,
+				// value:20,
+				step:20,
+
+
+				orientation:'vertical',
+
+				change:function(e,jqui){
+					console.log('this is change == '+jqui.value);
+				},
+
+				start:function(e,jqui){
+					console.log('this is start =='+jqui.value);
+				},
+
+				stop:function(e,jqui){
+					console.log('this is stop == '+jqui.value);
+				}
+
+			}).css("background-color","steelblue");
+
+			// $('#myslider >span').css({
+			// 	"background-color":"yellow"
+			// });
+
+			$('#myslider').children("span").css("background-color","violet");
+
+			$('#term').slider({
+
+				slide:function(e,jqui){
+					// console.log(e);
+					// console.log(jqui.value);
+
+					$('#days').val("From "+ jqui.value[0]+" days to "jqui.value[1]+" days");
+				},
+
+				min:7,
+				max:30,
+				step:1,
+				values:[7,10],
+				range:true
+
+			});
+
+			$('#term').children('span:nth-of-type(1)').css("background-color","yellow");
+			$('#term').children('span:nth-of-type(2)').css("background-color","violet");
+
+			$('#term > div').css("background-color","skyblue");			
+
+		});
+
+	</script>
+</body>
+</html>
+
+<!-- 27SD -->

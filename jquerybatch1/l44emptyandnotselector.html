@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>:empty & :not() Selector</title>
+	<style type="text/css">
+		body{
+			height: 100vh;
+
+			display: flex;
+			justify-content: center;
+			align-items: center;
+		}
+		.box{
+			width:200px;
+			height:100px;
+		}	
+
+	</style>
+</head>
+<body>
+
+	<div class="container">
+		<h1>My Fav Colors</h1>
+		<ul>
+			<li>Red</li>
+			<li>Green</li>
+			<li>Blue</li>
+			<li></li>
+			<li>Pink</li>
+			<li>White</li>
+			<li></li>
+			<li>Violet</li>
+		</ul>
+
+		<hr/>
+
+		<h1>My Fav Fruits</h1>
+		<ol>
+			<li>Apple</li>
+			<li>Orange</li>
+			<li></li>
+			<li></li>
+			<li>Mango</li>
+			<li></li>
+			<li>Peach</li>
+		</ol>	
+
+			<div>
+				<p class="box"></p>
+				<p>I am p tag inside of a div</p>
+				<p></p>
+			</div>
+			<div class="box"></div>
+			<p class="box"></p>	
+
+		</div>
+
+	<script src="./libs/jquery-3.6.0.min.js" type="text/javascript"></script>
+	<script type="text/javascript">
+		$(document).ready(function(){
+
+			// console.log('hi');	
+
+			// :empty
+			$(':empty').css('background-color','steelblue');
+
+
+			// :not()
+
+			$('li:not(ol li)').css('background-color','violet');
+			$('li:not(ul li)').css('background-color','pink');
+
+			$('li:not(ul li:empty)').css('background-color','pink');
+			$('li:not(:empty)').css('background-color','orange');
+
+		});
+	</script>
+</body>
+</html>

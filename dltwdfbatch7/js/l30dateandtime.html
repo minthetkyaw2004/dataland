@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Date And Time</title>
+	</head>
+	<body>
+		<small>Copyright c <span id="dimyear"></span> Eleven Media Group Co., Ltd. ALl rights reserved.</small>
+	</body>
+	<script type="text/javascript">
+
+		let date = new Date();
+		console.log(date);
+
+		// let getdate = new Date().getDate();
+		let getdate = new Date().getDate();
+		console.log(getdate);
+
+		let hour = new Date().getHours();
+		console.log(`This is hours = ${hour}`);
+
+		let minute = new Date().getMinutes();
+		console.log(`This is minutes = ${minute}`);
+
+		let second = new Date().getSeconds();
+		console.log(`This is seconds = ${second}`);
+
+		   // 1 jan 1970 > upnow
+		let time = new Date().getTime();
+		console.log(`This is time = ${time}`);
+
+		let now = new Date().now();
+		console.log(`This is now = ${now}`);
+
+		let month = date.getMonth();
+		console.log(`This is month = ${month}`);
+
+		let day = date.getDay();
+		console.log(`This is day = ${day}`);
+
+		let year = date.getFullYear();
+		console.log(`This is year = ${year}`)
+
+		let utcyear  = date.getUTCFullYear();
+		console.log(`This is UTC year = ${utcyear}`);
+
+		document.getElementById('dimyear').textContent = year
+
+		// m d y hr:m:s
+		let birthday = new Date('8-10-2003');
+		birthday = new Date('8-10-2003 11:35:00');
+		birthday = new Date('Aug 10 2003');
+		birthday = new Date('August 10 2003 11:00:00')
+		birthday = new Date('8/10/2003')
+
+		console.log(birthday);
+
+		//2 is march
+		birthday.setMonth(2);
+		birthday.setDate(12);
+		birthday.setFullYear(2003);
+
+		birthday.setHours(15);
+		birthday.setMinutes(30);
+		birthday.setSeconds(50);
+
+		console.log(birthday);
+
+	</script>
+</html>
+
+<!-- string
+number
+boolean
+object = date object
+object = array -->
+
+<!-- closet -->
+<!-- index number
+[0,1,2,3,4,5,6,7,8,9,10,11,12]
+[jan,feb,mar,apr,may,jun,jly,aug,sep,oct,nov,dec] -->
+
+<!-- [0,1,2,3,4,5,6]
+[sun,mon,tue,wed,thu,fri,sat] -->
+
+
+
+

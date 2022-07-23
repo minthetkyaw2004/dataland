@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Spinner</title>
+        <style type="text/css">
+         body{
+          height:100vh;
+
+          display:grid;
+          place-items:center;
+         }
+         .spinner{
+          width:100px;
+          height:100px;
+          animation:myani 1000ms linear infinite;
+         }
+
+         @keyframes myani{
+            0%{
+                transform:rotate(0turn);
+            }
+            100%{
+                transform:rotate(1turn);
+            }
+         }
+        </style>
+    </head>
+    <body>
+        
+  <img src="./img/loader.svg" class="spinner" alt=loader/>
+
+        
+    </body>
+</html>

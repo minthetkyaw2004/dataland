@@ -1,0 +1,65 @@
+/*Single Selector*/
+h1{
+	color: blue;
+}
+
+
+/*Group Selector(,)*/
+h2,h3,h4{
+	color: green;
+}
+
+
+/*ID Selector*/
+
+#myself,#mm{
+	color: blue;
+}
+
+#japu,span{
+	color: green;
+}
+
+
+/*Class Selector*/
+
+.ph{
+	color: red;
+}
+
+.phone{
+	font-size: 40px;
+}
+
+.hay{
+	color: red;
+	font-size: 16px;
+}
+
+#hay{
+	color: green;
+	font-size: 16px;
+}
+
+div{
+	color: blue;
+}
+
+/*h1{
+
+}
+
+h1,h2,h3{
+
+}
+
+#idname{
+
+}
+
+.classname{
+
+}
+
+<h1></h1>
+<h1 class=""></h1>*/

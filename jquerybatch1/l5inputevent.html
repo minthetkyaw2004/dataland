@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Input Event</title>
+	<style type="text/css">
+		
+		body{
+			height: 100vh;
+
+			display: flex;
+			justify-content: center;
+			align-items: center;
+		}
+
+		.container{
+			width: 500px;
+			background: #f4f4f4;
+			padding: 20px;
+		}
+
+		.form-group{
+			margin: 20px 0;
+		}
+
+	</style>
+</head>
+<body>
+
+	<div class="container">
+		<form>
+			
+			<div class="form-group">
+				<label for="firstname">First Name</label>
+				<input type="text" name="firstname" id="firstname" class="form-control" autocomplete="off" />
+			</div>
+
+			<div class="form-group">
+				<label for="lastname">Last Name</label>
+				<input type="text" name="lastname" id="lastname" class="form-control" autocomplete="off" />
+			</div>
+
+			<div class="form-group">
+				<label for="country">Country</label>
+				<select name="country" id="country" class="form-control">
+					<option selected disabled>Choose a country</option>
+					<option value="mm">Myanmar</option>
+					<option value="th">Thailand</option>
+					<option value="ind">Indonesia</option>
+				</select>
+			</div>						
+
+			<div class="form-group">
+				<label for="age">Age</label>
+				<input type="number" name="age" id="age" class="form-control" autocomplete="off" />
+			</div>
+
+			<div class="form-group">
+				<label for="phone">Phone</label>
+				<input type="text" name="phone" id="phone" class="form-control" autocomplete="off" />
+			</div>
+
+			<div class="form-group">
+				<label for="nrc">NRC</label>
+				<input type="text" name="nrc" id="nrc" class="form-control" autocomplete="off" />
+			</div>
+
+			<button>Submit</button>			
+
+		</form>
+	</div>
+
+	<script type="text/javascript" src="./libs/jquery-3.6.0.min.js"></script>
+	<script type="text/javascript">
+		
+		$('document').ready(function(){
+			// console.log("hi");
+
+			// blur()
+			// $('#firstname').blur(function(){
+			// 	console.log('firstname is working by blur');
+			// });
+
+
+			//change()
+			$('#firstname').change(function(){
+				console.log('firstname is working by change');
+			});
+
+			// focus()
+			// $('lastname').focus(function(){
+			// 	console.log('lastname is working by focus.');
+			// });
+
+			// focusin()
+			// $('lastname').focusin(function(){
+			// 	console.log('lastname is working by focusin.');
+			// });
+
+			// focusout()
+			// $('lastname').focusout(function(){
+			// 	console.log('lastname is working by focusout.')
+			// });
+
+			// select()
+			// $('input').select(function(){
+			// 	console.log('you selected to some text.');
+			// });
+
+			// change()
+			$('select').change(function(){
+				console.log('you change to a new country.');
+			});
+
+			// keydown()
+
+			var q = 0;
+			$('#age').keydown(function(){
+				console.log('you pressed a key.');
+				console.log(q += 1);
+				// console.log(q++);
+			});
+
+			// keypress()
+
+			var x = 1;
+			$('#phone').keypress(function(){
+				console.log('phone working by keypress');
+				console.log(x++);
+			});
+
+
+			// keyup() TAB key won't work
+
+			var y = 1;
+			$('#nrc').keyup(function(){
+				console.log('nrc working by keyup');
+				console.log(y++);
+			});
+
+			$('form').submit(function(e){
+				console.log('form submitted');
+
+				e.preventDefault();
+			});
+
+		});
+
+
+	</script>
+</body>
+</html>

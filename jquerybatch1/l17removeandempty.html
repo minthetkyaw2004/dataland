@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>remove and empty Method</title>
+</head>
+<body>
+	
+	<div>
+		<h1>Hello Heading Tag h1</h1>
+		<h2>Hello Heading Tag h2</h2>
+		<h3>Hello Heading Tag h3</h3>
+		<h2 class="headingh2">Hello Heading Tag h2</h2>
+		<h1>Hello Heading Tag h1</h1>
+		<span>Hello I am span tag</span>
+	</div>
+
+	<button type="button" id="removebtn">Remove</button>
+	<button type="button" id="emptybtn">Empty</button>
+	<button type="button" id="detachbtn">Detach</button>
+	<button type="button" id="addbtn">Add</button>
+
+	<script type="text/javascript" src="./libs/jquery-3.6.0.min.js"></script>
+	<script type="text/javascript">
+
+		// $(window.document).ready(function(){
+		// 	console.log('Hi');
+		// });
+
+		// jQuery(document).ready(function(){
+		// 	console.log('Hi');
+		// });
+
+		// jQuery(window.document).ready(function(){
+		// 	console.log('Hi');
+		// });
+
+		// window.jQuery(document).ready(function(){
+		// 	console.log('Hi');
+		// });
+
+		
+		$(document).ready(function(){
+			// console.log('Hi');
+
+			// remove = remove self
+			$('#removebtn').click(function(){
+				$('h2').remove();
+				$('h1, h2').remove();
+
+				$('div').remove();
+			});
+
+			// empty = just remove to all child elements
+			$('#emptybtn').click(function(){
+				$('div').empty();
+			});
+
+			// detach( = remove self)
+			$('#detachbtn').click(function(){
+				$('div').detach();
+			});
+
+			// add
+			$('#addbtn').click(function(){
+				// $('h1').css({
+				// 	"background-color" : 'yellow',
+				// 	"border" : '3px dotted red'
+				// });
+
+				// $('h1, h2').css({
+				// 	"background-color" : 'yellow',
+				// 	"border" : '3px dotted red'
+				// });		
+
+				// $('h1, .headingh2').css({
+				// 	"background-color" : 'yellow',
+				// 	"border" : '3px dotted red'
+				// });		
+
+				// $('h1, h2, h3').css({
+				// 	"background-color" : 'yellow',
+				// 	"border" : '3px dotted red'
+				// });
+
+				// $('h1').add('span')css({
+				// 	"background-color" : 'yellow',
+				// 	"border" : '3px dotted red'
+				// });	
+
+				// $('h1').add('span, h2')css({
+				// 	"background-color" : 'yellow',
+				// 	"border" : '3px dotted red'
+				// });	
+
+				// $('h1').add('span').add('h2').css({
+				// 	"background-color" : 'yellow',
+				// 	"border" : '3px dotted red'
+				// });										
+
+			});
+
+		});
+
+	</script>
+</body>
+</html>

@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>height Method</title>
+	<style type="text/css">
+		
+		body{
+			margin: 0;
+			padding: 0;
+		}
+		.container{
+			display: flex;
+		}
+		.box1{
+			width: 100px;
+			height: 100px;
+
+			margin: 5px; /* no action */
+			padding: 10px; /* action on innerHeight & outerHeight */
+
+			border: 2px solid #000;
+		}
+		.box2{
+			width: 100px;
+			height: 200px;
+		}
+		.box3{
+			width: 100px;
+			height: 300px;
+		}
+		.box4{
+			width: 100px;
+			height: 400px;
+		}
+		.box5{
+			width: 100px;
+			height: 500px;
+		}
+
+	</style>
+</head>
+<body>
+	
+	<div class="container">
+		
+		<div class="box1" style="background-color: red;">Box 1</div>
+		<div class="box2" style="background-color: green;">Box 2</div>
+		<div class="box3" style="background-color: orange;">Box 3</div>
+		<div class="box4" style="background-color: blue;">Box 4</div>
+		<div class="box5" style="background-color: violet;">Box 5</div>
+
+	</div>
+
+	<script type="text/javascript" src="./libs/jquery-3.6.0.min.js"></script>
+	<script type="text/javascript">
+		
+		$(document).ready(function(){
+			// console.log('hey');
+
+			$('.box1').click(function(){
+				console.log('Box 1 height = '+ $(this).height());
+				console.log('Box 1 innerHeight = '+ $(this).innerHeight());
+				console.log('Box 1 outerHeight = '+ $(this).outerHeight());
+			});
+			$('.box2').click(function(){
+				console.log('Box 1 height = '+ $(this).height());
+			});
+			$('.box3').click(function(){
+				console.log('Box 1 height = '+ $(this).height());
+			});
+			$('.box4').click(function(){
+				console.log('Box 1 height = '+ $(this).height());
+			});
+			$('.box5').click(function(){
+				console.log('Box 1 height = '+ $(this).height());
+			});
+		});
+
+	</script>
+</body>
+</html>

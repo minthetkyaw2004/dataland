@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>attr and removeattr Method</title>
+	<style type="text/css">
+		
+		body{
+			height: 100vh;
+
+			display: flex;
+			justify-content: center;
+			align-items: center;
+		}
+		.container{
+			width: 800px;
+			background: #f4f4f4;
+			padding: 20px;
+		}
+		.text-primary{
+			color: blue;
+		}
+		.text-light{
+			color: #fff;
+		}
+		.bg-info{
+			background-color: lightskyblue;
+		}
+		.text-center{
+			text-align: center;
+		}
+		.underline{
+			text-decoration: underline;
+		}
+
+	</style>
+</head>
+<body>
+	
+	<div class="container">
+		<div>
+			<img src="./img/logo1.png" alt="logo1" width="100" />
+			<h1 id="1" class="text-primary">Hello Myanmar</h1>
+			<h1 id="2">Hello Thailand</h1>
+			<h1 id="3">Hello Indonesia</h1>
+			<h1 id="4">Hello Sirilanka</h1>
+		</div>
+		<button type="button" id="textpri">text primary</button>
+		<button type="button" id="bginfo">Background Info</button>
+		<button type="button" id="txtbg">text-light-bg-info</button>
+		<button type="button" id="multibtn">multi attr</button>
+		<button type="button" id="rmattr">remove attr</button>
+
+		<button type="button" id="textcnt">text-center</button>
+		<button type="button" id="rmclass">remove-class</button>
+		<button type="button" id="hasclass">has-class</button>
+		<button type="button" id="togclass">toggle-class</button>
+	</div>
+
+	<script type="text/javascript" src="./libs/jquery-3.6.0.min.js"></script>
+	<script type="text/javascript">
+		
+		$(document).ready(function(){
+
+			// console.log('hi');
+
+			$('#textpri').click(function(){
+				$('h1').attr('class','text-primary');
+			});
+
+			$('#bginfo').click(function(){
+				$('h1').attr('class','bg-info');
+			});
+
+			$('#txtbg').click(function(){
+				$('h1').attr('class','text-light bg-info');
+			});
+
+			$('#multibtn').click(function(){
+				$('img').attr({
+					alt : 'logo2',
+					width : '150',
+					src : './img/logo2.png',
+					title : 'this is title',
+					abc : 'this is logo image'
+				});
+			});
+
+		// removeAttr()
+		// $('#rmbg').click(function(){
+		// 	$('h1').removeAttr('class');
+		// });
+
+		$('#rmbg').click(function(){
+			$('h1').removeAttr('id class'); // do not seperate comma
+		});		
+
+
+		//_________________________________________________________
+		// class()
+		
+		$('#textcnt').click(function(){
+			// $('h1').addclass('text-center');
+
+			$("h1").addClass('underline text-center');
+		});
+
+
+		// removeClass
+		$('#rmclass').click(function(){
+			// $('h1').removeClass('text-light');
+
+			$('h1').removeClass('bg-info text-light');
+		});
+
+		// hasClass()
+		$('#hasclass').click(function(){
+			window.alert($('h1').hasClass('text-center'));
+		});
+
+		// toggleclass()
+		$('#togclass').click(function(){
+			$('h1').toggleClass('text-center');
+		});
+
+		});
+
+
+
+	</script>
+</body>
+</html>
+
+<!-- 30ATT -->

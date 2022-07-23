@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>UI datepicker Method</title>
+	<link rel="stylesheet" href="./libs/jquery-ui-1.13.1/jquery-ui.min.css" type="text/css" />
+	<style type="text/css">
+
+		body{
+			height: 100vh;
+
+			display: flex;
+			justify-content: center;
+			align-items: center;
+		}
+
+		.container{
+			width: 900px;
+			background: #f4f4f4;
+			padding: 20px;
+		}
+
+		.form-group{
+			margin: 10px 0;
+		}
+
+		.form-group label{
+			display: block;
+			font-size: 20px;
+			margin-bottom: 20px;
+		}
+
+		.form-control{
+			width: 100%;
+			font-size: 20px;
+			padding: 5px;
+		}
+
+	</style>
+</head>
+<body>
+
+	<div class="container">
+		
+		<form action="" method="">
+			
+			<div class="form-group">
+				<label for="arrival">Arrival Date :</label>
+				<input type="text" name="arrival" id="arrival" />
+			</div>	
+
+			<div class="form-group">
+				<label for="bookingstart">Booking Start Date :</label>
+				<input type="text" name="bookingstart" id="bookingstart" />
+			</div>
+
+			<div class="form-group">
+				<label for="bookingend">Booking End Date :</label>
+				<input type="text" name="bookingend" id="bookingend" />
+			</div>
+
+
+		</form>
+
+	</div>
+	
+
+	<script type="text/javascript" src="./libs/jquery-3.6.0.min.js"></script>
+	<script type="text/javascript" src="./libs/jquery-ui-1.13.1/jquery-ui.min.js"></script>
+	<script type="text/javascript">
+
+		$(document).ready(function(){
+			// console.log('hi');
+
+
+			$('#arrival').datepicker({
+				numberOfMonths:2,
+				// numberOfMonths:[2,4]
+				showAnim:"slide",
+				// showAnim:"slideDown",
+				duration:2000,
+				// hideAnim:"slide"
+				duration:"slow",
+
+				dayNamesMin: ["Sun","Mon","Tue","Wed","Thu","Fri","Sat"],
+
+				// changeMonth: true,
+				// changeYear:true,
+
+				// minDate:0, // start from today, today is index no. 0 
+				// maxDate:1,
+
+				minDate:'07/02/2022',
+				maxDate:'08/05/2022'
+			});
+
+			$('#bookingstart').datepicker({
+				numberOfMonths:1,
+				showAnim:"slideDown",
+				dateFormat:"dd-mm-yy",
+
+				onClose:function(selectdate){
+					$('#bookingend').datepicker("option","minDate",selectdate);
+				}
+			});
+
+			$('#bookingend').datepicker({
+				numberOfMonths:1,
+				showAnim:"slide",
+				dateFormat:"dd-mm-yy",
+
+				onClose:function(){
+					$('#bookingstart').datepicker("option","maxDate",selectdate);
+				}
+			});
+
+		});
+	</script>
+</body>
+</html>

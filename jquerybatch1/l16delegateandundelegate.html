@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>delegate and undelegate Method</title>
+</head>
+<body>
+	
+	<h1>Hello Myanmar</h1>
+	<button type="button" id="dlgbtn">delegate</button>
+	<button type="button" id="undlgbtn">undelegate</button>
+	<button type="button" id="hibtn">say hi</button>
+	<button type="button" id="zbtn">zoom</button>
+
+	<hr/>
+
+	<div class="container">
+		<h3>Hello Indonesia</h3>
+		<button type="button" id="dlgmebtn">Delegate Me</button>
+		<button type="button" id="undlgmebtn">Undelegate Me</button>
+	</div>
+
+
+	<script type="text/javascript" src="./libs/jquery-3.6.0.min.js"></script>
+	<script type="text/javascript">
+		
+		$(document).ready(function(){
+			// console.log('hey');
+
+			// $(selector).delegate(selector,event,function);
+
+			$('body').delegate('#dlgbtn','click',function(){
+				// $('h1').prepend('<p>Thanks for delegate me</p>');
+				// $('h1').append('<p>Thanks for delegate me</p>');
+
+				// $('h1').before('<p>Thanks for delegate me</p>');
+				$('h1').after('<p>Thanks for delegate me</p>');
+			});
+
+
+			// undelegate()
+			$('#undlgbtn').click(function(){
+				// $('body').undelegate();
+				$("body").undelegate('click');
+			});
+
+
+			$('#hibtn').click(function(){
+				console.log('hi');
+			});
+
+			var x = 0;
+			$('#zbtn').click(function(e){
+
+				// console.log(e);
+
+				$('h2').css({fontSize: '+=10px'});
+				$('#zbtn').text('Zoom '+ (x + 1));
+				x++;
+
+				if(x === 3){
+					$('body').undelegate(e);
+				}
+			});
+
+
+			// Note:: all element must be in the same parent . inc button
+			$('div').delegate('#dlgmebtn','click',function(){
+				$('h3').after('<p>Thanks for delegate me again.</p>')
+			});
+			$('#undlgmebtn').click(function(){
+				$('.container').undelegate('click');
+			});
+
+
+
+
+
+
+		});
+	</script>
+</body>
+</html>

@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Array method</title>
+</head>
+<body>
+    
+</body>
+<script type="text/javascript">
+        // Array Method
+
+        let arrcolors = ["red", "black", "orange", "tomato", "violet"];
+
+        console.log(arrcolors);
+        console.log(arrcolors.length);
+        console.log(arrcolors[2]);
+        console.log(arrcolors);
+
+        // Character Array in js
+        let myfriend = "Aung Kyaw Kyaw";
+
+        console.log(Array.isArray(arrcolors)); // result = true
+        console.log(Array.isArray(myfriend)); // result = false
+
+        console.log(arrcolors);
+        console.log("Array to string by toString = " + arrcolors.toString());
+        console.log("Array to string by toString = " + arrcolors.join('*'));
+
+        const n = [null,null,"red","white"];
+        n[0] = 1;
+        n[1] = 2;
+        n[3] = 10;
+        console.log(n);
+
+
+        // add new value to array ( adding to the end )
+        n.push("gold");
+        n.push("orange");
+        n.push("red", "yellow");
+        console.log(n);
+
+        // add new value to array ( adding from the front )
+        n.unshift("tomato");
+        n.unshift("skyblue","grey");
+        console.log(n);
+
+        // remove value from front
+        n.shift();
+        n.shift();
+        console.log(n);
+
+        // remove value from end
+        n.pop();
+        n.pop();
+        console.log(n);
+
+        // remove only value 
+        delete n[2];
+        console.log(n);
+        console.log(n[2]);
+        console.log(n.length);
+
+        // splice (index, length(space))
+
+        let q = n.splice(1,5);
+        console.log(q);
+        console.log(q.length);
+
+        // array combine
+        const arr1 = ["aung aung","zaw zaw","maung maung","kyaw kyaw"];
+        const arr2 = ["su su","nu nu","yu yu","lu lu"];
+        const arr3 = [100,200,300,400];
+
+        console.log(arr1+arr2);
+
+        console.log(arr1.concat(arr2));
+        console.log(arr2.concat(arr1));
+        console.log(arr1.concat(arr1));
+        console.log(arr1.concat(arr3));
+
+        // array sorting
+
+        const arr4 = arr1.concat(arr2);
+        console.log(arr4);
+        console.log(arr4[3]);
+
+        // sort A to Z
+        console.log(arr4.sort());
+
+        //sort Z to A
+        console.log(arr4.reverse()); 
+
+        const arr5 = [700,200,100,50,150,10,5,7,6,600];
+
+        console.log(arr5);
+
+        console.log(arr5.sort(function(x,y){
+            // return a-z;
+            // return z-a;
+            // return x-y;
+            return y-x;
+        }));
+
+</script>
+</html>

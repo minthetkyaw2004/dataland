@@ -1,0 +1,100 @@
+.containerone .circle1{
+	width: 200px;
+	height: 200px;
+	border-radius: 50%;
+	background: conic-gradient(
+		yellow,
+		red,
+		green,
+		pink
+	);
+}
+
+.containerone .circle2{
+	width: 200px;
+	height: 200px;
+	border-radius: 50%;
+	background: conic-gradient(
+		#fcbacd,
+		#cdf45c,
+		#0f67bb,
+		#f67ca2
+	);
+}
+
+.containerone .circle3{
+	width: 200px;
+	height: 200px;
+	border-radius: 50%;
+	background: conic-gradient(
+		rgba(42, 184, 107, 0.8),
+		rgba(206, 209, 33, 0.9),
+		rgba(26, 124, 200, 0.9),
+		rgba(219, 49, 148, 1.0)
+	);
+}
+
+.containerone .circle4{
+	width: 200px;
+	height: 200px;
+	border-radius: 50%;
+	background: conic-gradient(
+		red 40%,
+		yellow 40% 60%,
+		blue 60% 100%
+	);
+}
+
+.containertwo{
+	width: 1000px;
+	height: 600px;
+	background-color: green;
+
+	display: flex;
+	justify-content: center; /*horizontal center*/
+	align-items: center; /*not align content*/
+}
+
+.containertwo .c1{
+	width: 300px;
+	height: 300px;
+	background-color: black;
+	border-radius: 50%;
+}
+
+.containertwo .c2{
+	width: 320px;
+	height: 320px;
+	background-color: blue;
+	border-radius: 50%;
+}
+
+.pointercontainer{
+	width: 20px;
+	height: 200px;
+	background-color: grey;
+	position: absolute;
+	z-index: 2;
+	top: -50px;
+
+	animation-name: myani;
+	animation-duration: 5s;
+	animation-iteration-count: infinite;
+	animation-timing-function: linear;
+	transform-origin: bottom;
+}
+.pointer{
+	width: 20px;
+	height: 20px;
+	background-color: red;
+	display: block;
+	border-radius: 50%;
+}
+@keyframes myani{
+	from{
+		transform: rotate(0deg);
+	}
+	to{
+		transform: rotate(360deg);
+	}
+}

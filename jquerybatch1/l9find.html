@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Find Method</title>
+	<style type="text/css">
+		
+		body{
+			height: 100vh;
+
+			display: flex;
+			justify-content: center;
+			align-items: center;
+		}
+		.container{
+			width: 500px;
+			background: #f4f4f4;
+			padding: 20px;
+
+			display: flex;
+		}
+		.box{
+			width: 100px;
+			height: 300px;
+			background: green;
+
+			margin: 0 10px;
+		}
+
+	</style>
+</head>
+<body>
+
+	<div class="container">
+		<div class="box"></div>
+		<div class="box"></div>
+		<div class="box"></div>
+		<div class="box"></div>
+	</div>
+
+
+	<script type="text/javascript" src="./libs/jquery-3.6.0.min.js"></script>
+	<script type="text/javascript">
+		
+		$(document).ready(function(){
+			// console.log('hi');
+
+			$('.container').click(function(){
+				// console.log($(this).find('.b2'));
+
+				$(this).find('.b2').css({
+					"height":"200px",
+					"background-color":"orange"
+				});
+
+				// $(this).find('.b2, .b1').css({
+				// 	"height":"200px",
+				// 	"background-color":"orange"					
+				// });
+				
+			});
+
+		});
+
+	</script>
+</body>
+</html>

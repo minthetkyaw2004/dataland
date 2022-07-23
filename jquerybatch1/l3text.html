@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Text Method</title>
+</head>
+<body>
+	
+	<h1>This is awesome <u>Js library</u></h1>
+	<h1>save myanmar</h1>
+	<h1>pray myanmar</h1>
+
+	<hr/>
+
+	<h2>This is awesome <u>Js library</u></h2>
+	<h2>save myanmar</h2>
+	<h2>pray myanmar</h2>
+
+	<hr/>
+
+	<h3>This is awesome <u>Js library</u></h3>
+	<h3>save myanmar</h3>
+	<h3>pray myanmar</h3>	
+
+	<hr/>
+
+	<h4>This is awesome <u>Js library</u></h4>
+	<h4>save myanmar</h4>
+	<h4>pray myanmar</h4>
+
+	<hr/>		
+
+	<script type="text/javascript" src="./libs/jquery-3.6.0.min.js"></script>
+	<script type="text/javascript">
+		
+		console.log("hey");
+
+		// html() to html()
+		$('document').ready(function(){
+			console.log("hi");
+			var getfirsth1 = $("h1:first").html();
+			// $("h1").html(getfirsth1);
+			console.log(getfirsth1);
+			$("h1:last").html(getfirsth1);
+		});
+		
+
+		// text() to text()
+		$('document').ready(function(){
+			// console.log($("h2").html());
+			// console.log($("h2").text());
+			const getfirsth2 = $("h2").text();
+			$("h2:last").text(getfirsth2);
+		});
+
+
+		// html() to text()
+		$("document").ready(function(){
+			let getfirsth3 = $("h3").html();
+			$("h3:last").text(getfirsth3);
+		})
+
+
+		// text() to html()
+		$("document").ready(function(){
+			let getfirsth4 = $("h4").text();
+			$("h4:last").html(getfirsth4);
+		})
+
+	</script>
+</body>
+</html>
+16TXT

@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>HTML</title>
+</head>
+<body>
+
+	<h1>Welcome to jQuery</h1>
+	<h3>This is awesome js library.</h3>
+	<button type="button">Click Me</button>
+
+	<script type="text/javascript" src="./libs/jquery-3.6.0.min.js"></script>
+	<script type="text/javascript">
+		
+		console.log("hay");
+
+		$('document').ready(function(){
+			console.log("hi");
+
+			console.log($('h1'));
+			// console.log($("h1").html());
+			// console.log($("h3").html());
+			console.log($("button").html());
+
+			// window.alert($("h1").html());
+
+			$("button").click(function(){
+
+				// console.log('hey I am working.');
+
+				// $("h1").html("hello jQuery");
+
+				$("h1").html("Hello <i style='color: red;'>jQuery</i>")
+
+			})
+
+		});
+
+	</script>
+</body>	
+</html>
