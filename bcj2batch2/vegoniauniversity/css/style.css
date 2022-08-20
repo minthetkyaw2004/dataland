@@ -1,0 +1,48 @@
+:root{
+	--primary-color: darkviolet;	
+}
+
+*{
+	box-sizing: border-box;
+}
+
+body{
+	padding: 0;
+	margin: 0;
+}
+
+/*Start Header Section*/
+
+/*Start Header Intro*/
+
+.headerintros{
+	background: var(--primary-color);
+	color: #fff;
+	/*display: none;*/
+	padding: 15px 0;
+}
+
+@media(min-width: 1200px){
+	.visiblelgs{
+		display: block;
+	}
+}
+
+.infos{
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+
+	font-size: 14px;
+	font-weight: bold;
+}
+
+.headericons a{
+	color: #fff;
+	margin: 0 10px;
+}
+
+/*End Header Intro*/
+
+/*End Header Section*/
+
