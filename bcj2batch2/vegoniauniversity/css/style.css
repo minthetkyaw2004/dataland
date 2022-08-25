@@ -1,128 +1,198 @@
-@import url('https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@300&display=swap');
-
-:root{
-	--primary-color: darkviolet;
-	--primary-grad-color: linear-gradient(to left,darkviolet,deepskyblue);
+:root {
+  --primary-color: darkviolet;
+  --primary-grad-color: linear-gradient(to left, darkviolet, deepskyblue);
 }
 
-*{
-	box-sizing: border-box;
+* {
+  box-sizing: border-box;
+}
+body {
+  padding: 0;
+  margin: 0;
 }
 
-body{
-	font-family: 'Source Sans Pro', sans-serif;
+/* Start Header Section */
 
-	padding: 0;
-	margin: 0;
+/* Start Header Intro  */
+.headerintros {
+  background-color: var(--primary-color);
+  color: #fff;
+  padding: 15px 0;
+  display: none;
 }
 
-
-
-/*START HEADER SECTION*/
-
-/*START HEADER INTRO*/
-.headerintros{
-	background-color: var(--primary-color);
-	color: #fff;
-	padding: 15px 0;
-
-	display: none;
+@media (min-width: 1200px) {
+  .visiblelgs {
+    display: block;
+  }
 }
 
-@media (min-width: 1200px){
-	.visiblelgs{
-		display: block;
+.infos {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  font-size: 14px;
+  font-weight: bold;
+}
+
+.headericons a {
+  color: #fff;
+  margin: 0 10px;
+}
+
+/* End Header Intro  */
+
+header {
+  height: 80vh;
+  background: var(--primary-grad-color);
+  position: relative;
+}
+
+/*START NAVBAR SECTION*/
+
+.menustyles li a {
+  color: #000;
+  font-size: 13px;
+  letter-spacing: 1.5px;
+
+  transition: all 0.5s;
+}
+
+.menustyles li a:hover {
+  color: var(--primary-color);
+}
+
+.navbuttons {
+  border: none;
+}
+
+.navbuttons:focus {
+  box-shadow: none;
+}
+
+.lines1,
+.lines2,
+.lines3 {
+  width: 17px;
+  height: 2px;
+  margin: 3px;
+}
+
+.crossxs .lines1 {
+  transform: rotate(-45deg) translate(-3px, 4px);
+}
+
+.crossxs .lines2 {
+  opacity: 0;
+}
+
+.crossxs .lines3 {
+  transform: rotate(45deg) translate(-3px, -4px);
+}
+/*END NAVBAR SECTION*/
+
+/* Start Banner  */
+.banners {
+  width: 90%;
+
+  position: absolute;
+  left: 50%;
+  top: 50%;
+
+  transform: translate(-50%, -50%);
+}
+
+.bannerheaders{
+	font-weight: bold;
+	letter-spacing: 3px;
+	animation-name: bananis;
+	animation-duration: 2s;
+}
+
+.bannerparagraphs,.banner-btn{
+	animation-name: bananis;
+	animation-duration: 2s;
+	animation-delay: .5s;
+	
+	animation-fill-mode: backwards;
+}
+
+@keyframes bananis{
+	from{
+		transform: translateY(100px);
+		opacity: 0;
+	}
+	to{
+		transform: translateY(0);
+		opacity: 1;
 	}
 }
 
-.infos{
-	display: flex;
-	justify-content: space-between;
-	align-content: center;
+/* End Banner  */
+.studentgroups {
+  width: 40%;
 
-	font-size: 14px;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  z-index: 1;
+}
+
+.waves {
+  width: 100%;
+  position: absolute;
+  left: 0;
+  bottom: -5px;
+
+  z-index: 2;
+}
+/* End Header Section  */
+
+/*Start Student Counter Section*/
+
+.counters{
+	width: 100%;
+	height: 20vh;
 	font-weight: bold;
+	letter-spacing: 2px;
+
+	display: flex;
+	justify-content: center;
+	align-items: center;
 }
 
-.headericons a{
-	color: #fff;
-	margin: 0 10px;
-}	
-/*END HEADER INTRO*/
+.counteritems{
+	display: inline-block;
+	width: 24%;
+	text-align: center;
+	border-right: 1px solid rgba(0, 0, 0, 0.4);
+}
 
-header{
-	height: 80vh;
+.counteritems:last-child{
+	border-right: none;
+}
+
+.counteritems .fas{
 	background: var(--primary-grad-color);
+	color: transparent;
+	-webkit-background-clip: text;
 }
 
-/*START NAV BAR*/
-.menustyles li a{
-	color: #000;
-	font-size: 13px;
-	letter-spacing: 1.5px;
+/*End Student Counte Section*/
 
-	transition: color .5s;
+/*Start About Us Section*/
+.aboutuss{
+	background-image: linear-gradient(
+		rgba(0, 0, 0, 0.3),
+		rgba(0, 0, 0, 0.3)
+	), url('../assets/img/banner/banner4.jpg');
+	background-repeat: no-repeat;
 }
 
-.menustyles li a:hover{
-	color: var(--primary-color);
+.aboutuss ul li{
+	list-style-type: none;
+	background-color: var(--primary-color);
+	margin: 20px 0;
 }
-
-.navbuttons{
-	border: none;
-}
-.navbuttons:focus{
-	box-shadow: none;
-}
-
-.lines1,.lines2,.lines3{
-	width: 17px;
-	height: 2px;
-	margin: 3px;
-}
-
-.crossxs .lines1{
-	transform: rotate(-45deg) translate(-3px,4px);
-}
-
-.crossxs .lines2{
-	opacity: 0;
-}
-
-.crossxs .lines3{
-	transform: rotate(45deg) translate(-3px,-4px);
-}
-/*END NAV BAR*/
-
-
-/*START BANNER*/
-.banners{
-	width: 90%;
-
-	position: absolute;
-	left: 50%;
-	top: 50%;
-
-	transform: translate(-50%,-50%);
-}
-/*END BANNER*/
-
-
-
-/*END HEADER SECTION*/
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+/*End About Us Section*/
