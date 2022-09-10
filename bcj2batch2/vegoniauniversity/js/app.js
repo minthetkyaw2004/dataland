@@ -1,65 +1,100 @@
-// Start jQuery Area
 
-$(document).ready(function(){
 
-	// Start Header
+// // Start Jquery Area
 
-		// Start Nav Bar
+$(document).ready(function () {
 
-		$('.navbuttons').click(function(){
-			$(this).toggleClass('crossxs');
-		});
+    // Start Header
+    //  Start Nav Bar
 
-		// End Nav Bar
+    $(".navbuttons").click(function () {
+        $(this).toggleClass("crossxs");
+    });
+    // End Nav Bar
 
-	// End Header
+    // End Header
+
 });
+
+
+
 
 // End jQuery Area
 
-// -----------------------------------------------
-
 // Start Javascript Area
 
-	// Start Students Counter Section
+// Start Student Counter Section
 
-		var getcountervalues = document.querySelectorAll('.countervalues');
-		// console.log(getcountervalues);
+var getcountervalues = document.querySelectorAll('.countervalues');
 
-		getcountervalues.forEach(function(getcountervalue){
+console.log(getcountervalues);
 
-			getcountervalue.textContent = 0;
+getcountervalues.forEach(function (getcountervalue) {
+    getcountervalue.textContent = 0;
 
-			// console.log(getcountervalue);
+    // console.log(getcountervalue);
 
-			const updatecounter = function(){
-				// console.log('i am working');
+    const updatecounter = function () {
+        // console.log('i am working');
 
-				const getcttarget = getcountervalue.getAttribute('data-target');
-				// console.log(getcttarget);
-				// console.log(typeof getcttarget, getcttarget);
+        const getcttarget = +getcountervalue.getAttribute('data-target');
+        // console.log(getcttarget);
+        // console.log(typeof getcttarget, getcttarget);
 
-				const getctcontent = +getcountervalue.innerText;
-				console.log(typeof getctcontent,getctcontent);
+        const getctcontent = +getcountervalue.innerText;
+        console.log(getctcontent, getctcontent);
 
-				const incnumber = getcttarget / 100;
-				console.log(incnumber);
+        const incnumber = getcttarget / 40;
+        console.log(incnumber);
 
-				if(getctcontent < getcttarget){
-					getcountervalue.textContent = getctcontent + incnumber;
+        if (getctcontent < getcttarget) {
+            getcountervalue.textContent = getctcontent + incnumber;
+            setTimeout(updatecounter, 50);
+        }
+    }
 
-					setTimeout(updatecounter,30);
+    updatecounter();
+});
 
-				}
-			}
+// End Student Counter Section
 
-			updatecounter();
-
-		});
-
-	// End Students Counter Section
-
-
-// End Javascript Area
 
 // 25CT
+
+
+
+// Start Rating Section 
+
+// start google code for chart 
+google.charts.load('current', { 'packages': ['corechart'] });
+google.charts.setOnLoadCallback(drawChart);
+
+function drawChart() {
+
+    var data = google.visualization.arrayToDataTable([
+        ['Task', 'Hours per Day'],
+        ['Myanmar', 8],
+        ['Thailand', 2],
+        ['Singapore', 4],
+        ['Indonesia', 2],
+        ['SiriLanka', 8]
+    ]);
+
+    var options = {
+        title: 'International Students',
+        // is3D: true
+        // pieHole: true
+        width: 550,
+        height: 400
+    };
+
+    var chart = new google.visualization.PieChart(document.getElementById('piechart'));
+
+    chart.draw(data, options);
+}
+
+// end google code for chart
+
+// End Rating Section
+
+// End Javascript Area 

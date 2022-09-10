@@ -1,69 +1,63 @@
 *{
-	box-sizing: border-box;
+    box-sizing:border-box;
 }
 
 body{
-	height: 100vh;
+    height:100vh;
 
-	display: flex;
-	justify-content: center;
-	align-items: center;
+    display:grid;
+    place-items:center;
 }
 
 .container{
-	border: 1px solid #ccc;
-	border-radius: 5px;
-	padding: 10px;
+    border:1px solid #ccc;
+    border-radius:5px;
+    padding:10px;
 }
 
 .form-control{
-	width: 100%;
-	border: 1px solid #ccc;
-	padding: 10px 20px;
-	margin-bottom: 10px;
+    width:100%;
+    border:1px solid #ccc;
+    padding:10px 20px;
+    margin-bottom:10px;
 }
 
 .form-control:focus{
-	outline: 3px solid skyblue;
+    outline:none;
 }
 
 .btn{
-	width: 48%;
-	background-color: steelblue;
-	color: #fff;
-
-	border: 0;
-	padding: 10px;
-	cursor: pointer;
-
-	margin-bottom: 10px;
+    width:48%;
+    background-color:steelblue;
+    color:#fff;
+    border:0;
+    padding:10px;
+    margin-bottom:10px;
+    cursor:pointer;
 }
 
 .list-group{
-	height: 500px;
-	list-style-type: none;
+    height:500px;
+    list-style-type:none;
 
-	padding: 0;
-	margin: 0;
+    padding:0;
+    margin:0;
 
-	overflow-y: scroll;
+    overflow-y:scroll;
 }
 
 .list-group li a{
-	display: block;
+    display:block;
 
-	text-decoration: none;
-	background-color: #f5f5f5;
-	color: #000;
-	font-size: 17px;
-	border: 1px solid #ddd;
+    background-color:#f5f5f5;
+    color:#000;
+    font-size:17px;
+    text-decoration:none;
+    border:1px solid #ddd;
 
-	padding: 15px;
-	margin-top: -1px; 
+    padding:15px;
+    margin-top:-1px;
 }
-
 .list-group li a:hover{
-	background-color: #f1f1f1;
+    background-color:#f1f1f1;
 }
-
-/*24PN*/
